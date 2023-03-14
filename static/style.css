@@ -1,0 +1,87 @@
+.user-img {
+    max-height: 100px;
+  }
+
+  .img-wrapper {
+    width: 75px; /* or whatever width you want to use */
+    height: 100px; /* or whatever height you want to use */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .portrait {
+    /* width: 150px;  */
+    height: 200px; 
+    overflow: hidden;
+    /* display: flex; */
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-img img {
+    height: 100%;
+    width: auto;
+  }
+
+  .user-port {
+    max-height: 200px;
+    width: auto;
+  }
+ 
+  .jumbotron {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .post {
+    font-size: 25px; 
+  }
+ 
+  .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li {
+    margin-right: 1rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+  }
+
+  .nav {
+    padding: 1em 0 1em 2em;
+  }
+
+  .users {
+    /* display: inline-block; */
+    border: 1px solid rgb(117, 117, 117);
+    border-radius: 5px;
+    list-style: none;
+    padding: 5px 20px;
+    margin: 5px;
+    min-width: 150px;    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .all_users {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  } 
+
+  .all_users li {
+    text-align: center;
+  }

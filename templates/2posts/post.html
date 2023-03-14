@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>{{ post.title }}</h1>
+    <p class="post">{{ post.content }}</p>
+    <p>Created at: {{ post.created_at }}</p>
+    <div>
+        <a href="{{ url_for('users.show_user', user_id=post.user.id) }}" class="btn btn-primary d-inline-block">Return</a>
+        <a href="{{ url_for('posts.edit_post', post_id=post.id) }}" class="btn btn-secondary d-inline-block">Edit post</a>
+        <form action="{{ url_for('posts.delete_post', post_id=post.id) }}" method="post" class="d-inline-block">
+            <button type="submit" class="btn btn-danger">Delete post</button>
+        </form>
+    </div>
+    <h3>Tags:</h3>
+    <ul>
+    {% for tag in tags %}
+        <li>{{ tag.name }}</li>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}

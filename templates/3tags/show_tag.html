@@ -1,0 +1,15 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1>{{ tag.name }}</h1>
+
+        <div>
+            <a href="{{ url_for('tags.edit_tag', tag_id=tag.id) }}" class="btn btn-primary mr-2 d-inline-block">Edit Tag</a>
+            <form method="POST" action="{{ url_for('tags.delete_tag', tag_id=tag.id) }}" onsubmit="return confirm('Are you sure you want to delete this tag?');" class="d-inline-block">
+                <button type="submit" class="btn btn-danger">Delete Tag</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
