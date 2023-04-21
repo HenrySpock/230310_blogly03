@@ -23,9 +23,6 @@ app.register_blueprint(users_bp)
 app.register_blueprint(posts_bp)
 app.register_blueprint(tags_bp)
 
-# connect_db(app)
-# db.create_all() 
-
 if __name__ == '__main__':
     app.run(debug=True)
  

@@ -7,8 +7,6 @@ from models import db
 
 users_bp = Blueprint('users', __name__)
 
-#Routes are called @user_bp. instead of @app. 
-
 @users_bp.route('/')
 def home():
     return redirect('/users')

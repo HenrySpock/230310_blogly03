@@ -17,8 +17,7 @@ class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
     content = db.Column(db.String(), nullable=False)
-    created_at = db.Column(db.DateTime(), nullable=False , default=datetime.datetime.utcnow)
-    # , default=datetime.datetime.utcnow
+    created_at = db.Column(db.DateTime(), nullable=False , default=datetime.datetime.utcnow) 
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     user = db.relationship('User', backref='posts')
     post_tags = db.relationship('PostTag', backref='post', cascade='all, delete-orphan')

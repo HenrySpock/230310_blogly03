@@ -5,22 +5,22 @@
 {% endblock %}
 
 {% block content %}
-    <div class="jumbotron">  
-        <h1>All Users</h1>
-            <ul class="all_users">
-                {% for user in users|sort(attribute='last_name') %}
-                    <a href="{{ url_for('users.show_user', user_id=user.id) }}"> 
-                        <li class="users">
-                            <div class="img-wrapper"> 
-                                <img src="{{ user.image_url }}" alt="{{ user.full_name }}" class="user-img">
-                            </div> 
-                            {{ user.full_name }}
-                        </li>
-                    </a> 
-                {% endfor %}
-                {% if not users %}
-                    <li>No users found.</li>
-                {% endif %}
-            </ul> 
-    </div>
+  <div class="jumbotron">  
+    <h1>All Users</h1>
+      <ul class="all_users">
+        {% for user in users|sort(attribute='last_name') %}
+          <a href="{{ url_for('users.show_user', user_id=user.id) }}"> 
+            <li class="users">
+              <div class="img-wrapper"> 
+                <img src="{{ user.image_url }}" alt="{{ user.full_name }}" class="user-img">
+              </div> 
+              {{ user.full_name }}
+            </li>
+          </a> 
+        {% endfor %}
+        {% if not users %}
+          <li>No users found.</li>
+        {% endif %}
+      </ul> 
+  </div>
 {% endblock %}

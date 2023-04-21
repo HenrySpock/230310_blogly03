@@ -7,8 +7,6 @@ from models import db
 
 tags_bp = Blueprint('tags', __name__, url_prefix='/tags')
 
-#Routes are called @tags. instead of @app. 
-
 @tags_bp.route('/')
 def list_tags():
     tags = Tag.query.all()
